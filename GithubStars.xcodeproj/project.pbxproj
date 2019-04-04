@@ -13,6 +13,8 @@
 		5008C7F82255EB6D00CD760D /* GitRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5008C7F72255EB6D00CD760D /* GitRepositoryTests.swift */; };
 		5008C7FA2255FD6D00CD760D /* RepoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5008C7F92255FD6D00CD760D /* RepoService.swift */; };
 		5008C7FC2255FD8700CD760D /* GitAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5008C7FB2255FD8700CD760D /* GitAPIService.swift */; };
+		5008C7FE2256008E00CD760D /* SampleResponseGITrepos.json in Resources */ = {isa = PBXBuildFile; fileRef = 5008C7FD2256008E00CD760D /* SampleResponseGITrepos.json */; };
+		5008C800225600D500CD760D /* MockingGitAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5008C7FF225600D500CD760D /* MockingGitAPIService.swift */; };
 		50572114225484190016FD4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50572113225484190016FD4B /* AppDelegate.swift */; };
 		50572119225484190016FD4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50572117225484190016FD4B /* Main.storyboard */; };
 		5057211B2254841A0016FD4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5057211A2254841A0016FD4B /* Assets.xcassets */; };
@@ -52,6 +54,8 @@
 		5008C7F72255EB6D00CD760D /* GitRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitRepositoryTests.swift; sourceTree = "<group>"; };
 		5008C7F92255FD6D00CD760D /* RepoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoService.swift; sourceTree = "<group>"; };
 		5008C7FB2255FD8700CD760D /* GitAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitAPIService.swift; sourceTree = "<group>"; };
+		5008C7FD2256008E00CD760D /* SampleResponseGITrepos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SampleResponseGITrepos.json; sourceTree = "<group>"; };
+		5008C7FF225600D500CD760D /* MockingGitAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockingGitAPIService.swift; sourceTree = "<group>"; };
 		50572110225484190016FD4B /* GithubStars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubStars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50572113225484190016FD4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50572118225484190016FD4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -109,7 +113,6 @@
 				8F2A056962621C5EB1D45F04 /* Pods-GithubStarsUITests.debug.xcconfig */,
 				B6E81696B9AA5E2375BB8475 /* Pods-GithubStarsUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -166,8 +169,10 @@
 			isa = PBXGroup;
 			children = (
 				5057212A2254841A0016FD4B /* Info.plist */,
+				5008C7FD2256008E00CD760D /* SampleResponseGITrepos.json */,
 				505721282254841A0016FD4B /* GithubStarsTests.swift */,
 				5008C7F72255EB6D00CD760D /* GitRepositoryTests.swift */,
+				5008C7FF225600D500CD760D /* MockingGitAPIService.swift */,
 			);
 			path = GithubStarsTests;
 			sourceTree = "<group>";
@@ -379,6 +384,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5008C7FE2256008E00CD760D /* SampleResponseGITrepos.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,6 +514,7 @@
 			files = (
 				5008C7F82255EB6D00CD760D /* GitRepositoryTests.swift in Sources */,
 				505721292254841A0016FD4B /* GithubStarsTests.swift in Sources */,
+				5008C800225600D500CD760D /* MockingGitAPIService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

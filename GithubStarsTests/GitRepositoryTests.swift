@@ -35,21 +35,21 @@ class GitRepositoryTests :XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    func testReadmeURL(){
+    func test_ReadmeURL(){
         
         let url = testRepository1.readmeURL()
         let url2 = URL(string:"https://github.com/kentcdodds/advanced-react-patterns-v2/blob/master/README.md")!
         
         XCTAssertEqual(url, url2)
     }
-    func testOwnerName(){
+    func test_OwnerName(){
         
         let owner1 = testRepository1.ownerName()
         let owner2 = "kentcdodds/advanced-react-patterns-v2".components(separatedBy: "/").first ?? ""
         
         XCTAssertEqual(owner1, owner2)
     }
-    func testRepoName(){
+    func test_RepoName(){
         
         let owner1 = testRepository1.repoName()
         let owner2 = "kentcdodds/advanced-react-patterns-v2".components(separatedBy: "/").last ?? ""
