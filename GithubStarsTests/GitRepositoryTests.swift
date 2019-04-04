@@ -45,14 +45,14 @@ class GitRepositoryTests :XCTestCase {
     func testOwnerName(){
         
         let owner1 = testRepository1.ownerName()
-        let owner2 = "kentcdodds/advanced-react-patterns-v2".components(separatedBy: "/").first!
+        let owner2 = "kentcdodds/advanced-react-patterns-v2".components(separatedBy: "/").first ?? ""
         
         XCTAssertEqual(owner1, owner2)
     }
     func testRepoName(){
         
         let owner1 = testRepository1.repoName()
-        let owner2 = "kentcdodds/advanced-react-patterns-v2".components(separatedBy: "/").last!
+        let owner2 = "kentcdodds/advanced-react-patterns-v2".components(separatedBy: "/").last ?? ""
         
         XCTAssertEqual(owner1, owner2)
     }
