@@ -8,7 +8,7 @@
 
 import RxSwift
 
-class GitRepositoryTableViewCell: UITableViewCell, Configurable, GitRepositoryPresentable {
+class GitRepositoryTableViewCell: UITableViewCell, Configurable, GitRepositoryPresentable,ReusableView {
     
     var disposeBag = DisposeBag()
     

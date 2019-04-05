@@ -22,27 +22,27 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GitRepositoryTableViewCell" rowHeight="130" id="848-8F-LDR" customClass="GitRepositoryTableViewCell" customModule="GitHubStars" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="130"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GitRepositoryTableViewCell" rowHeight="144" id="848-8F-LDR" customClass="GitRepositoryTableViewCell" customModule="GitHubStars" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="144"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="848-8F-LDR" id="up1-oF-Eap">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="129.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="143.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="240" text="repo description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ufL-jE-5Ch">
-                                                    <rect key="frame" x="15" y="39.5" width="345" height="36.5"/>
+                                                    <rect key="frame" x="15" y="49.5" width="345" height="30.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="repo name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9i-5T-fQi">
-                                                    <rect key="frame" x="15" y="11" width="345" height="20.5"/>
+                                                    <rect key="frame" x="15" y="21" width="345" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bMV-et-BNs">
-                                                    <rect key="frame" x="303.5" y="98.5" width="56.5" height="20.5"/>
+                                                    <rect key="frame" x="303.5" y="102.5" width="56.5" height="20.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="★" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1zc-Cj-bB9">
                                                             <rect key="frame" x="0.0" y="0.0" width="15.5" height="20.5"/>
@@ -59,7 +59,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="i2c-WK-LUb">
-                                                    <rect key="frame" x="15" y="84" width="115" height="35"/>
+                                                    <rect key="frame" x="15" y="88" width="115" height="35"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nPz-e4-xiB">
                                                             <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
@@ -78,17 +78,17 @@
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="bMV-et-BNs" secondAttribute="bottom" id="0FE-2Y-GMr"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="bMV-et-BNs" secondAttribute="trailing" id="0ik-6J-CPO"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="B9i-5T-fQi" secondAttribute="trailing" id="4qP-7u-nDW"/>
                                                 <constraint firstItem="i2c-WK-LUb" firstAttribute="leading" secondItem="up1-oF-Eap" secondAttribute="leadingMargin" id="5gf-FK-X4k"/>
                                                 <constraint firstItem="i2c-WK-LUb" firstAttribute="top" secondItem="ufL-jE-5Ch" secondAttribute="bottom" constant="8" id="AJL-ck-T2x"/>
                                                 <constraint firstItem="ufL-jE-5Ch" firstAttribute="leading" secondItem="up1-oF-Eap" secondAttribute="leadingMargin" id="B5o-g5-mDz"/>
                                                 <constraint firstItem="B9i-5T-fQi" firstAttribute="leading" secondItem="up1-oF-Eap" secondAttribute="leadingMargin" id="DgM-u2-dCc"/>
-                                                <constraint firstItem="B9i-5T-fQi" firstAttribute="top" secondItem="up1-oF-Eap" secondAttribute="topMargin" id="NwJ-eo-2WJ"/>
+                                                <constraint firstItem="B9i-5T-fQi" firstAttribute="top" secondItem="up1-oF-Eap" secondAttribute="topMargin" constant="10" id="NwJ-eo-2WJ"/>
                                                 <constraint firstItem="ufL-jE-5Ch" firstAttribute="top" secondItem="B9i-5T-fQi" secondAttribute="bottom" constant="8" id="PHr-x0-WYV"/>
-                                                <constraint firstItem="i2c-WK-LUb" firstAttribute="bottom" secondItem="up1-oF-Eap" secondAttribute="bottomMargin" id="eiY-l6-Sjm"/>
+                                                <constraint firstItem="i2c-WK-LUb" firstAttribute="bottom" secondItem="up1-oF-Eap" secondAttribute="bottomMargin" constant="-10" id="eiY-l6-Sjm"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="ufL-jE-5Ch" secondAttribute="trailing" id="uja-df-Kt8"/>
+                                                <constraint firstItem="bMV-et-BNs" firstAttribute="bottom" secondItem="i2c-WK-LUb" secondAttribute="bottom" id="zWe-kH-sq3"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -111,6 +111,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="9Rx-yG-TTd" id="XYI-Un-l6V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

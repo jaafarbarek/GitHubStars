@@ -16,7 +16,11 @@ import RxCocoa
 //let starsDescendingSegment = "&sort=stars&order=desc"
 //let readmeSegment = "/blob/master/README.md"
 
-
+var mainURL :String {
+    let url = "https://api.github.com/search/repositories?q=created:>2017-10-22&sort=stars&order=desc"
+    let urlEncoded = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+    return urlEncoded!
+}
 class GitAPIService: RepoService {
     
     var page = 0
@@ -35,10 +39,11 @@ class GitAPIService: RepoService {
     
     func getRepos(path: String) -> Observable<[GitRepository]> {
         var currentUrlString = baseURL.absoluteString + path
-        if page != 0 {
-            currentUrlString += "&page=\(page)"
-        }
-        guard let url = URL(string: currentUrlString) else { return Observable<[GitRepository]>.just([]) }
+//        if page != 0 {
+//            currentUrlString += "&page=\(page)"
+//        }
+        let urlEncoded = currentUrlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+        guard let url = URL(string: urlEncoded) else { return Observable<[GitRepository]>.just([]) }
         
         return URLSession.shared.rx.data(request: URLRequest(url: url))
             .map { [unowned self] data in

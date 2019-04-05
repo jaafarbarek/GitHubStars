@@ -22,7 +22,7 @@ class GitRepoListCoordinator: Coordinator {
     func start() {
         let vc = GitRepoListViewController.instantiate()
         vc.repoSelectable = self
-        vc.navigationItem.title = "Repos"
+        vc.navigationItem.title = "Trending Repos"
         vc.tabBarItem = UITabBarItem(title: "Trending", image: UIImage(named: "icon-trending"), tag: 0)
         presenter.pushViewController(vc, animated: true)
         gitRepoListViewController = vc
