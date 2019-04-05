@@ -18,12 +18,13 @@ struct GitRepository : Codable {
     var owner : Owner
     
     enum CodingKeys: String, CodingKey {
-        case id = "id"
+        case id
+        case description
+        case owner
         case commitsUrl = "commits_url"
         case fullName = "full_name"
         case stargazersCount = "stargazers_count"
-        case description = "description"
-        case owner = "owner"
+        
     }
     
 }

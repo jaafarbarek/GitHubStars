@@ -32,9 +32,12 @@ class TrendingFeedVM {
                 
                 let formatter = DateFormatter()
                 formatter.dateFormat = "yyyy-MM-dd"
-                let dateString = formatter.string(from: Date().addingTimeInterval(-30*24*3600))
+                let date = Calendar.current.date(byAdding: .day, value: -30, to: Date())!
+                let dateString = formatter.string(from: date)
                 
-                let path = "search/repositories?q=created:&sort=stars&order=desc"
+//                let path = "search/repositories?q=created:&sort=stars&order=desc"
+                 let path = "search/repositories?q=created:\(dateString)&sort=stars&order=desc"
+                
                 //                let urlString = self.gitAPIService.baseURL.absoluteString + "search/repositories?q=created:>\(dateString)"
                 //                let urlString = self.gitAPIService.baseURL.absoluteString + "search/repositories?q=created:>\(dateString)&sort=stars&order=desc"//.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!
                 //                let urlString = self.gitAPIService.baseURL.absoluteString + "search/repositories?q=created:>\(dateString)&sort=stars&order=desc"

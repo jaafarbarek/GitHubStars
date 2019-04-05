@@ -22,6 +22,19 @@
 		5057211E2254841A0016FD4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5057211C2254841A0016FD4B /* LaunchScreen.storyboard */; };
 		505721292254841A0016FD4B /* GithubStarsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505721282254841A0016FD4B /* GithubStarsTests.swift */; };
 		505721342254841A0016FD4B /* GithubStarsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505721332254841A0016FD4B /* GithubStarsUITests.swift */; };
+		507777C622573CD200B7BE6C /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507777C522573CD200B7BE6C /* MainTabBarController.swift */; };
+		507777C822573D7600B7BE6C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507777C722573D7600B7BE6C /* Coordinator.swift */; };
+		507777CA22573DEF00B7BE6C /* RepoSelectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507777C922573DEF00B7BE6C /* RepoSelectable.swift */; };
+		507777CC22573EA600B7BE6C /* GitRepoDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507777CB22573EA600B7BE6C /* GitRepoDetailCoordinator.swift */; };
+		507777CE22573ECE00B7BE6C /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507777CD22573ECE00B7BE6C /* ApplicationCoordinator.swift */; };
+		507777D022573EEA00B7BE6C /* GitRepoListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507777CF22573EEA00B7BE6C /* GitRepoListCoordinator.swift */; };
+		507777D222573F1500B7BE6C /* GitRepoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507777D122573F1500B7BE6C /* GitRepoListViewController.swift */; };
+		507777D422573F8700B7BE6C /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507777D322573F8700B7BE6C /* UITableView+Extension.swift */; };
+		507777D622573F9800B7BE6C /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507777D522573F9800B7BE6C /* UIStoryboard+Extension.swift */; };
+		507777D822573FA600B7BE6C /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507777D722573FA600B7BE6C /* UIViewController+Extension.swift */; };
+		507777DA225740B500B7BE6C /* Selectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507777D9225740B500B7BE6C /* Selectable.swift */; };
+		507777DC2257767D00B7BE6C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507777DB2257767D00B7BE6C /* SettingsViewController.swift */; };
+		507777DE2257776500B7BE6C /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507777DD2257776500B7BE6C /* SettingsCoordinator.swift */; };
 		5C43AEB0C9DF8B28F9BFECF4 /* Pods_GithubStarsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4529F7BE2DE8862588BCE2C8 /* Pods_GithubStarsUITests.framework */; };
 		B6307993E3B3929202E32879 /* Pods_GithubStars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47F079007707DE3625E3F1E5 /* Pods_GithubStars.framework */; };
 		BFC9C8EEA364EDE2BC0AEDC6 /* Pods_GithubStarsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0ABFA9FD45B59F5F7BCE3E7 /* Pods_GithubStarsTests.framework */; };
@@ -70,6 +83,19 @@
 		5057212F2254841A0016FD4B /* GithubStarsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GithubStarsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		505721332254841A0016FD4B /* GithubStarsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubStarsUITests.swift; sourceTree = "<group>"; };
 		505721352254841A0016FD4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		507777C522573CD200B7BE6C /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		507777C722573D7600B7BE6C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		507777C922573DEF00B7BE6C /* RepoSelectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoSelectable.swift; sourceTree = "<group>"; };
+		507777CB22573EA600B7BE6C /* GitRepoDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitRepoDetailCoordinator.swift; sourceTree = "<group>"; };
+		507777CD22573ECE00B7BE6C /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		507777CF22573EEA00B7BE6C /* GitRepoListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitRepoListCoordinator.swift; sourceTree = "<group>"; };
+		507777D122573F1500B7BE6C /* GitRepoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitRepoListViewController.swift; sourceTree = "<group>"; };
+		507777D322573F8700B7BE6C /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		507777D522573F9800B7BE6C /* UIStoryboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extension.swift"; sourceTree = "<group>"; };
+		507777D722573FA600B7BE6C /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		507777D9225740B500B7BE6C /* Selectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selectable.swift; sourceTree = "<group>"; };
+		507777DB2257767D00B7BE6C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		507777DD2257776500B7BE6C /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
 		8F2A056962621C5EB1D45F04 /* Pods-GithubStarsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubStarsUITests.debug.xcconfig"; path = "Target Support Files/Pods-GithubStarsUITests/Pods-GithubStarsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B6E81696B9AA5E2375BB8475 /* Pods-GithubStarsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubStarsUITests.release.xcconfig"; path = "Target Support Files/Pods-GithubStarsUITests/Pods-GithubStarsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DB9ACCEC3D5CC71E8BAD1782 /* Pods-GithubStarsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubStarsTests.debug.xcconfig"; path = "Target Support Files/Pods-GithubStarsTests/Pods-GithubStarsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -210,6 +236,11 @@
 		50572143225485220016FD4B /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				507777C722573D7600B7BE6C /* Coordinator.swift */,
+				507777CB22573EA600B7BE6C /* GitRepoDetailCoordinator.swift */,
+				507777CD22573ECE00B7BE6C /* ApplicationCoordinator.swift */,
+				507777CF22573EEA00B7BE6C /* GitRepoListCoordinator.swift */,
+				507777DD2257776500B7BE6C /* SettingsCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -242,6 +273,9 @@
 		50572147225485570016FD4B /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				507777C522573CD200B7BE6C /* MainTabBarController.swift */,
+				507777D122573F1500B7BE6C /* GitRepoListViewController.swift */,
+				507777DB2257767D00B7BE6C /* SettingsViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -249,6 +283,8 @@
 		50572148225485620016FD4B /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				507777C922573DEF00B7BE6C /* RepoSelectable.swift */,
+				507777D9225740B500B7BE6C /* Selectable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -265,6 +301,9 @@
 		5057214A2254856E0016FD4B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				507777D322573F8700B7BE6C /* UITableView+Extension.swift */,
+				507777D522573F9800B7BE6C /* UIStoryboard+Extension.swift */,
+				507777D722573FA600B7BE6C /* UIViewController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -504,11 +543,24 @@
 			files = (
 				50572114225484190016FD4B /* AppDelegate.swift in Sources */,
 				5008C80222560A7700CD760D /* TrendingFeedVM.swift in Sources */,
+				507777D422573F8700B7BE6C /* UITableView+Extension.swift in Sources */,
+				507777C622573CD200B7BE6C /* MainTabBarController.swift in Sources */,
+				507777D822573FA600B7BE6C /* UIViewController+Extension.swift in Sources */,
+				507777DE2257776500B7BE6C /* SettingsCoordinator.swift in Sources */,
+				507777DC2257767D00B7BE6C /* SettingsViewController.swift in Sources */,
 				5008C7F22255E96A00CD760D /* Owner.swift in Sources */,
 				5008C7F42255E97700CD760D /* GitRepository.swift in Sources */,
+				507777D622573F9800B7BE6C /* UIStoryboard+Extension.swift in Sources */,
+				507777D222573F1500B7BE6C /* GitRepoListViewController.swift in Sources */,
+				507777DA225740B500B7BE6C /* Selectable.swift in Sources */,
+				507777CC22573EA600B7BE6C /* GitRepoDetailCoordinator.swift in Sources */,
+				507777CA22573DEF00B7BE6C /* RepoSelectable.swift in Sources */,
 				5008C7F62255E98600CD760D /* GitRepositoriesResponse.swift in Sources */,
+				507777D022573EEA00B7BE6C /* GitRepoListCoordinator.swift in Sources */,
 				5008C7FA2255FD6D00CD760D /* RepoService.swift in Sources */,
 				5008C7FC2255FD8700CD760D /* GitAPIService.swift in Sources */,
+				507777C822573D7600B7BE6C /* Coordinator.swift in Sources */,
+				507777CE22573ECE00B7BE6C /* ApplicationCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

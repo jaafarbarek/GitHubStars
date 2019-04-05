@@ -13,7 +13,7 @@ struct Owner: Codable {
     var avatarUrl : String
     
     enum CodingKeys: String, CodingKey {
-        case id = "id"
+        case id
         case avatarUrl = "avatar_url"
     }
 }
