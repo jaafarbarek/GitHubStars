@@ -11,19 +11,20 @@ import RxSwift
 class TrendingFeedVM {
     
     // MARK: Current api service
-    let gitAPIService: RepoService
+    let githubService: RepoService
     
     // MARK: Rx Bindings & DisposeBag
     var disposeBag = DisposeBag()
     let downloadTrigger = PublishSubject<Void>()
     let repos = PublishSubject<[GitRepository]>()
+    var allRepos = [GitRepository]()
     
-    init(gitAPIService: RepoService) {
-        self.gitAPIService = gitAPIService
+    init(githubService: RepoService) {
+        self.githubService = githubService
         initRepos()
     }
-   
-    var allRepos = [GitRepository]()
+    
+    
     
     
     // MARK: Initialization subscription for [Repo]
@@ -31,10 +32,10 @@ class TrendingFeedVM {
         downloadTrigger
             .subscribe(onNext: { [unowned self] in
                 
-                self.gitAPIService.page += 1
+                self.githubService.page += 1
                 
                 DispatchQueue.global(qos: .background).async {
-                    self.gitAPIService.getMostPopularRepositories(byDate: ">\(Date().getDateString(inThePastDays: 30))")
+                    self.githubService.getMostPopularRepositories(byDate: ">\(Date().getDateString(inThePastDays: 30))")
                         .observeOn(MainScheduler.instance)
                         .subscribe(onNext: { [unowned self] repos in
                             self.allRepos += repos

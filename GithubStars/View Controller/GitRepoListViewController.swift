@@ -25,8 +25,6 @@ class GitRepoListViewController: UIViewController {
     }
     
     fileprivate func setUp() {
-        let gitAPIService = GithubService()
-        trendingFeedViewModel = TrendingFeedVM(gitAPIService: gitAPIService)
         configureRefreshControl()
         bindTrendingFeedElements()
         trendingFeedViewModel.downloadTrigger.onNext(())
@@ -37,13 +35,15 @@ class GitRepoListViewController: UIViewController {
     }
     
     // MARK: Element bindings configuration
-   fileprivate func bindTrendingFeedElements() {
+    fileprivate func bindTrendingFeedElements() {
         trendingFeedViewModel.repos
             .bind(to: tableView.rx.items(cellIdentifier: GitRepositoryTableViewCell.defaultReuseIdentifier)) { [unowned self] (row, repo: GitRepository, cell: GitRepositoryTableViewCell) in
                 cell.configure(item: repo)
                 
                 if self.refreshControl.isRefreshing {
-                    self.refreshControl.endRefreshing()
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
+                        self.refreshControl.endRefreshing()
+                    })
                 }
             }
             .disposed(by: disposeBag)
@@ -66,7 +66,7 @@ class GitRepoListViewController: UIViewController {
         trendingFeedViewModel.repos.subscribe(onNext: { [unowned self] (repos: [GitRepository]) in
             // Scroll the table view a bit to reveal the next page
             DispatchQueue.main.asyncAfter(deadline: .now()+0.1, execute: {
-                self.tableView.scroll(by: 44)
+                self.tableView.scroll(by: 10)
             })
         }).disposed(by: disposeBag)
         
@@ -76,10 +76,8 @@ class GitRepoListViewController: UIViewController {
     }
     
     fileprivate func startSpinnerAnimation (){
-        
         spinner.startAnimating()
         spinner.frame = CGRect(x: CGFloat(0), y: CGFloat(0), width: tableView.bounds.width, height: CGFloat(44))
-        
         self.tableView.tableFooterView = spinner
         self.tableView.tableFooterView?.isHidden = false
     }
@@ -87,7 +85,6 @@ class GitRepoListViewController: UIViewController {
         spinner.stopAnimating()
         self.tableView.tableFooterView?.isHidden = true
     }
-    
     
 }
 

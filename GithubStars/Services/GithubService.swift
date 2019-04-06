@@ -1,11 +1,10 @@
-//
-//  GithubService.swift
-//  RepoSearcher
-//
-//  Created by Arthur Myronenko on 6/29/17.
-//  Copyright © 2017 UPTech Team. All rights reserved.
-//
 
+//  GithubService.swift
+//  GithubStars
+//
+//  Created by Jaafar Barek on 4/4/19.
+//  Copyright © 2019 Jaafar Barek. All rights reserved.
+//
 import Foundation
 import RxSwift
 import RxCocoa
@@ -25,8 +24,8 @@ class GithubService:RepoService {
         self.session = session
     }
     
-    /// - Parameter language: Language to filter by
-    /// - Returns: A list of most popular repositories filtered by langugage
+    /// - Parameter date: Date to get repos since then
+    /// - Returns: A list of most popular repositories since the date
     func getMostPopularRepositories(byDate date: String) -> Observable<[GitRepository]> {
         let encodedDate = date.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
         var urlString = "https://api.github.com/search/repositories?q=created:\(encodedDate)&sort=stars&order=desc"

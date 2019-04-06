@@ -17,29 +17,22 @@ class MockingGitAPIService : RepoService {
     
     var repos = [GitRepository]()
     
-    func getRepos(path: String) -> Observable<[GitRepository]> {
-        guard let url = Bundle.main.url(forResource: "SampleResponseGITrepos", withExtension: "json") else {
+    func getMostPopularRepositories(byDate date: String) -> Observable<[GitRepository]> {
+        let testBundle = Bundle(for: type(of: self))
+        guard let url = testBundle.path(forResource: "SampleResponseGITrepos", ofType: "json") else {
             return Observable<[GitRepository]>.just([])
         }
-        return URLSession.shared.rx.data(request: URLRequest(url: url))
-            .map { [unowned self] data in
-                if let results = try? JSONDecoder().decode(GitRepositoriesResponse.self, from: data) {
-                    self.repos = []
-                    
-                    results.items.forEach({ (repo : GitRepository) in
-                        self.repos.append(repo)
-                    })
-                    
-                    // Return result
-                    return self.repos
-                } else {
-                    
-                    // Return previous result
-                    return self.repos
-                }
-            }
-            .catchErrorJustReturn(self.repos)
+        return URLSession.shared.rx
+            .json(url: URL(string: url)!)
+            .flatMap { json throws -> Observable<[GitRepository]> in
+                guard
+                    let json = json as? [String: Any],
+                    let itemsJSON = json["items"] as? [[String: Any]]
+                    else { return Observable.error(ServiceError.cannotParse) }
+                
+                let repositories = itemsJSON.compactMap(GitRepository.init)
+                return Observable.just(repositories)
+        }
     }
-    
     
 }
