@@ -20,9 +20,9 @@ Download the repository manually and open it using xcode 10.1 and it should run 
 
 The application contains 3 third party dependencies install using cocoapods:
 
-1- [RxSwift](https://github.com/ReactiveX/RxSwift)
-2- [RxCocoa](https://github.com/ReactiveX/RxSwift/tree/master/RxCocoa)
-3- [Kingfisher](https://github.com/onevcat/Kingfisher)
+1- [RxSwift](https://github.com/ReactiveX/RxSwift) <br />
+2- [RxCocoa](https://github.com/ReactiveX/RxSwift/tree/master/RxCocoa) <br />
+3- [Kingfisher](https://github.com/onevcat/Kingfisher) <br />
 
 If you have any problem running the code update the pods as follows:
 

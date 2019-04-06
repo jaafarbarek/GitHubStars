@@ -24,9 +24,6 @@ class TrendingFeedVM {
         initRepos()
     }
     
-    
-    
-    
     // MARK: Initialization subscription for [Repo]
     func initRepos() {
         downloadTrigger

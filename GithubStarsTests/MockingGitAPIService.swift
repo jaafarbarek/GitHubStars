@@ -28,7 +28,10 @@ class MockingGitAPIService : RepoService {
                 guard
                     let json = json as? [String: Any],
                     let itemsJSON = json["items"] as? [[String: Any]]
-                    else { return Observable.error(ServiceError.cannotParse) }
+                    else {
+                        return Observable.error(ServiceError.cannotParse)
+                        
+                }
                 
                 let repositories = itemsJSON.compactMap(GitRepository.init)
                 return Observable.just(repositories)
