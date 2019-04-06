@@ -5,68 +5,41 @@ A small app that will list the most starred Github repos that were created in th
 [![Swift Version][swift-image]][swift-url]
 [![Build Status][travis-image]][travis-url]
 [![License][license-image]][license-url]
-[![codebeat-badge][codebeat-image]][codebeat-url]
 
-One to two paragraph statement about your product and what it does.
+
+The application is Structured using the MVVM-Coordinator Pattern with a protocol oriented approach and RxSwift was used for reactive programming.
 
 ![](header.png)
 
 ## Installation
 
-Add this project on your `Package.swift`
-
-```swift
-import PackageDescription
-
-let package = Package(
-dependencies: [
-.Package(url: "https://github.com/user/project.git", majorVersion: 0, minor: 0)
-]
-)
-```
-
-## Usage example
-
-
-```swift
-import Project
-let proj = Class(param: String?)
-proj.run()
-```
+Download the repository manually and open it using xcode 10.1 and it should run normally.
 
 
 ## Development setup
 
-Describe how to install all development dependencies and how to run an automated test-suite of some kind. Potentially do this for multiple platforms.
+The application contains 3 third party dependencies install using cocoapods:
+
+1- [RxSwift](https://github.com/ReactiveX/RxSwift)
+2- [RxCocoa](https://github.com/ReactiveX/RxSwift/tree/master/RxCocoa)
+3- [Kingfisher](https://github.com/onevcat/Kingfisher)
+
+If you have any problem running the code update the pods as follows:
 
 ```sh
-make install
+pod update
 ```
 
-## Release History
-
-* 0.2.1
-* CHANGE: Update docs (module code remains unchanged)
-* 0.2.0
-* CHANGE: Remove `setDefaultXYZ()`
-* ADD: Add `init()`
-* 0.1.1
-* FIX: Crash when calling `baz()` (Thanks @GenerousContributorName!)
-* 0.1.0
-* The first proper release
-* CHANGE: Rename `foo()` to `bar()`
-* 0.0.1
-* Work in progress
 
 ## Meta
 
-Your Name – [@YourTwitter](https://twitter.com/dbader_org) – YourEmail@example.com
+Jaafar Barek – [@BarekJaafarr](https://twitter.com/BarekJaafar) – Jaafarbarek@gmail.com
 
-Distributed under the XYZ license. See ``LICENSE`` for more information.
+Distributed under the MIT license.
 
-[https://github.com/yourname/github-link](https://github.com/dbader/)
+[https://github.com/jaafarbarek](https://github.com/jaafarbarek)
 
-[swift-image]:https://img.shields.io/badge/swift-3.0-orange.svg
+[swift-image]:https://img.shields.io/badge/swift-4.2-orange.svg
 [swift-url]: https://swift.org/
 [license-image]: https://img.shields.io/badge/License-MIT-blue.svg
 [license-url]: LICENSE
