@@ -191,7 +191,6 @@
 		50572112225484190016FD4B /* GithubStars */ = {
 			isa = PBXGroup;
 			children = (
-				509FBF5F22581DF0005D251E /* New Group */,
 				50572143225485220016FD4B /* Coordinator */,
 				50572144225485360016FD4B /* Model */,
 				50572145225485480016FD4B /* View */,
@@ -325,13 +324,6 @@
 				509FBF6E22582574005D251E /* Date+Extension.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		509FBF5F22581DF0005D251E /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
