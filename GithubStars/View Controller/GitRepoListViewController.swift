@@ -25,7 +25,7 @@ class GitRepoListViewController: UIViewController {
     }
     
     fileprivate func setUp() {
-        let gitAPIService = GitAPIService()
+        let gitAPIService = GithubService()
         trendingFeedViewModel = TrendingFeedVM(gitAPIService: gitAPIService)
         configureRefreshControl()
         bindTrendingFeedElements()

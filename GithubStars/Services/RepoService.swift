@@ -14,6 +14,6 @@ protocol RepoService: class {
     var page: Int { get set }
     
     // MARK: Get Repositories by URL
-    func getRepos(path: String) -> Observable<[GitRepository]>
+    func getMostPopularRepositories(byDate date: String) -> Observable<[GitRepository]>
     
 }

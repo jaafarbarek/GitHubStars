@@ -25,26 +25,16 @@ class TrendingFeedVM {
    
     var allRepos = [GitRepository]()
     
+    
     // MARK: Initialization subscription for [Repo]
     func initRepos() {
         downloadTrigger
             .subscribe(onNext: { [unowned self] in
                 
-                let formatter = DateFormatter()
-                formatter.dateFormat = "yyyy-MM-dd"
-                let date = Calendar.current.date(byAdding: .day, value: -30, to: Date())!
-                let dateString = formatter.string(from: date)
-//  "https://api.github.com/search/repositories?q=created:>2017-10-22&sort=stars&order=desc"
-                //                let path = "search/repositories?q=created:&sort=stars&order=desc"
-                let path = "search/repositories?q=created:>\(dateString)&sort=stars&order=desc"
-                
-                //                let urlString = self.gitAPIService.baseURL.absoluteString + "search/repositories?q=created:>\(dateString)"
-                //                let urlString = self.gitAPIService.baseURL.absoluteString + "search/repositories?q=created:>\(dateString)&sort=stars&order=desc"//.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!
-                //                let urlString = self.gitAPIService.baseURL.absoluteString + "search/repositories?q=created:>\(dateString)&sort=stars&order=desc"
                 self.gitAPIService.page += 1
                 
                 DispatchQueue.global(qos: .background).async {
-                    self.gitAPIService.getRepos(path: path)
+                    self.gitAPIService.getMostPopularRepositories(byDate: ">\(Date().getDateString(inThePastDays: 30))")
                         .observeOn(MainScheduler.instance)
                         .subscribe(onNext: { [unowned self] repos in
                             self.allRepos += repos
